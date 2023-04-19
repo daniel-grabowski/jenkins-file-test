@@ -1,14 +1,16 @@
 pipeline {
-    agent { docker { image 'node:18.10.0-alpine' } }
+    agent { docker { image 'node:18.10.0-alpine3.15' } }
     stages {
-        stage('NPM Install') {
-            withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
-                sh 'npm install'
+        stage('YARN Install') {
+            steps {
+                sh 'yarn install'
             }
         }
 
         stage('Lint') {
-            sh 'ng lint'
+            steps {
+                sh 'ng lint'
+            }
         }
 
         stage('build') {
