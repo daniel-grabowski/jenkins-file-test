@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'node:18.10.0-alpine3.15' } }
+    agent any
     stages {
         stage('YARN Install') {
             steps {
