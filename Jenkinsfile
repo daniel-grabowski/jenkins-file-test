@@ -4,6 +4,9 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
+                sh 'echo Cleanup workspace'
+                cleanWs()
+
                 sh 'echo Check node version'
                 sh 'node -v'
 
