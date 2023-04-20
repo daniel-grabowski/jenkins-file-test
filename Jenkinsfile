@@ -1,9 +1,6 @@
 pipeline {
-    agent {
-        node {
-            label 'node'
-        }
-    }
+    agent any
+    tools { nodejs "node" }
     stages {
         stage('Prepare') {
             steps {
