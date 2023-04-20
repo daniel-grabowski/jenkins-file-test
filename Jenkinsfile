@@ -13,11 +13,11 @@ pipeline {
                 sh 'echo Check yarn version'
                 sh 'yarn -v'
 
-                sh 'echo Check Angular version'
-                sh 'yarn ng v'
-
                 sh 'echo Install project dependencies'
                 sh 'yarn install'
+
+                sh 'echo Check Angular version'
+                sh 'yarn ng v'
             }
         }
 
