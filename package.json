@@ -1,14 +1,7 @@
 {
   "name": "jenkins-file-test",
   "version": "0.0.0",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/daniel-grabowski/jenkins-file-test/blob/main/LICENSE",
-      "distribution": "repo",
-      "comments": ""
-    }
-  ],
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
