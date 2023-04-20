@@ -4,35 +4,32 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'echo Cleanup workspace'
-                cleanWs()
-
                 sh 'echo Log API_URL parameter'
-                sh '${API_URL}'
+                sh 'echo ${API_URL}'
 
                 sh 'echo Check node version'
                 sh 'node -v'
 
-                sh 'echo Check npm version'
-                npm command: '-v'
-
                 sh 'echo Check yarn version'
-                yarn command: '-v'
+                sh 'yarn -v'
 
                 sh 'echo Install project dependencies'
-                yarn command: 'install'
+                sh 'yarn install'
+
+                sh 'echo Check Angular version'
+                sh 'yarn ng v'
             }
         }
 
         stage('Lint') {
             steps {
-                yarn command: 'lint'
+                sh 'yarn lint'
             }
         }
 
         stage('build') {
             steps {
-                yarn command: 'build'
+                sh 'yarn build'
             }
         }
     }
