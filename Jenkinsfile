@@ -18,13 +18,13 @@ pipeline {
 
         stage('Lint') {
             steps {
-                sh 'ng lint'
+                npm command: 'run ng lint'
             }
         }
 
         stage('build') {
             steps {
-                sh 'ng build'
+                npm command: 'run ng build'
             }
         }
     }
