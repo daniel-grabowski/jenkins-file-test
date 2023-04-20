@@ -4,14 +4,19 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'echo Check node, yarn and npm version'
+                sh 'echo Check node version'
                 sh 'node -v'
+
+                sh 'echo Check npm version'
                 npm command: '-v'
+
+                sh 'echo Check yarn version'
                 yarn command: '-v'
 
                 sh 'echo Install @angular/cli'
                 npm command: 'install -g @angular/cli'
 
+                sh 'echo Install project dependencies'
                 yarn command: 'install'
             }
         }
