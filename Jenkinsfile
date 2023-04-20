@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    docker { image 'node:18.16-alpine' }
     stages {
         stage('Prepare') {
             steps {
-                sh 'echo Check node, yarn and npm version'
+                sh 'Check node, yarn and npm version'
                 sh 'node -v'
                 npm command: '-v'
                 yarn command: '-v'
