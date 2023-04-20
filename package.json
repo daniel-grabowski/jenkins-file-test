@@ -43,5 +43,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.9.4"
-  }
+  },
+  "repository": "https://github.com/daniel-grabowski/jenkins-file-test.git",
+  "author": "daniel-grabowski <daniel.grabowski@zartis.com>",
+  "license": "MIT"
 }

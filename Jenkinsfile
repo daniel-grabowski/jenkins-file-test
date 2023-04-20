@@ -3,13 +3,15 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'npm install -g @angular/cli'
-                sh 'npm install -g yarn'
-            }
-        }
-        stage('YARN Install') {
-            steps {
-                sh 'yarn install'
+                npm command: 'install -g @angular/cli'
+                npm command: 'install -g yarn'
+
+                sh 'echo Check node and npm version'
+                sh 'node -v'
+                npm command: '-v'
+
+                yarn command: 'install'
+                yarn command: '-v'
             }
         }
 
