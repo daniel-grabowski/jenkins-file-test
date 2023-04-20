@@ -8,7 +8,7 @@ pipeline {
                 cleanWs()
 
                 sh 'echo Log API_URL parameter'
-                sh '${params.API_URL}'
+                sh '${API_URL}'
 
                 sh 'echo Check node version'
                 sh 'node -v'
