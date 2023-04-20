@@ -9,6 +9,9 @@ pipeline {
                 npm command: '-v'
                 yarn command: '-v'
 
+                sh 'echo Install @angular/cli'
+                npm command: 'install -g @angular/cli'
+
                 yarn command: 'install'
             }
         }
