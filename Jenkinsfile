@@ -19,9 +19,6 @@ pipeline {
                 sh 'echo Check yarn version'
                 yarn command: '-v'
 
-                sh 'echo Install @angular/cli'
-                npm command: 'install @angular/cli'
-
                 sh 'echo Install project dependencies'
                 yarn command: 'install'
             }
