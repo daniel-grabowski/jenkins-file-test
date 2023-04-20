@@ -9,6 +9,10 @@ pipeline {
                 npm command: '-v'
                 yarn command: '-v'
 
+                sh 'nvm install v16.15.1'
+                sh 'nvm use v16.15.1'
+                sh 'nvm alias default v16.15.1'
+
                 sh 'echo Install @angular/cli'
                 npm command: 'install -g @angular/cli'
 
@@ -18,13 +22,13 @@ pipeline {
 
         stage('Lint') {
             steps {
-                npm command: 'run ng lint'
+                yarn command: 'lint'
             }
         }
 
         stage('build') {
             steps {
-                npm command: 'run ng build'
+                yarn command: 'build'
             }
         }
     }
