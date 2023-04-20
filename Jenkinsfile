@@ -4,27 +4,32 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'echo Check node, yarn and npm version'
+                sh 'echo Log API_URL parameter'
+                sh 'echo ${API_URL}'
+
+                sh 'echo Check node version'
                 sh 'node -v'
-                npm command: '-v'
-                yarn command: '-v'
 
-                sh 'echo Install @angular/cli'
-                npm command: 'install -g @angular/cli'
+                sh 'echo Check yarn version'
+                sh 'yarn -v'
 
-                yarn command: 'install'
+                sh 'echo Install project dependencies'
+                sh 'yarn install'
+
+                sh 'echo Check Angular version'
+                sh 'yarn ng v'
             }
         }
 
         stage('Lint') {
             steps {
-                npm command: 'run ng lint'
+                sh 'yarn lint'
             }
         }
 
         stage('build') {
             steps {
-                npm command: 'run ng build'
+                sh 'yarn build'
             }
         }
     }
