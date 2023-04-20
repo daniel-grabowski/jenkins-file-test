@@ -53,6 +53,5 @@
     "typescript": "~4.9.4"
   },
   "repository": "https://github.com/daniel-grabowski/jenkins-file-test.git",
-  "author": "daniel-grabowski <daniel.grabowski@zartis.com>",
-  "license": "MIT"
+  "author": "daniel-grabowski <daniel.grabowski@zartis.com>"
 }
