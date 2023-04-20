@@ -9,10 +9,6 @@ pipeline {
                 npm command: '-v'
                 yarn command: '-v'
 
-                sh 'nvm install v16.15.1'
-                sh 'nvm use v16.15.1'
-                sh 'nvm alias default v16.15.1'
-
                 sh 'echo Install @angular/cli'
                 npm command: 'install -g @angular/cli'
 
