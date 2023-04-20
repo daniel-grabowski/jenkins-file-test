@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'Check node, yarn and npm version'
+                sh 'echo Check node, yarn and npm version'
                 sh 'node -v'
                 npm command: '-v'
                 yarn command: '-v'
