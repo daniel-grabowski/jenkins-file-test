@@ -14,7 +14,7 @@ pipeline {
                 sh 'yarn -v'
 
                 sh 'echo Install project dependencies'
-                sh 'yarn install'
+                sh 'yarn'
 
                 sh 'echo Check Angular version'
                 sh 'yarn ng v'
