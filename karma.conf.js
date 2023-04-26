@@ -33,11 +33,12 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml', 'junit'],
+    reporters: ['progress', 'junit'],
     browsers: ['ChromeHeadless'],
-    restartOnFileChange: true,
+    restartOnFileChange: false,
     junitReporter: {
-      outputDir: 'test-reports/junit-report.xml'
+      outputDir: 'test-reports/',
+      outputFile: 'junit-report.xml',
     },
   });
 };
