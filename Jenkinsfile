@@ -3,10 +3,11 @@ pipeline {
     tools { nodejs "node" }
     triggers {
         githubPush()
-    }
+    }       
     stages {
         stage('Prepare') {
             steps {
+                sh 'echo test'
                 sh 'echo Log API_URL parameter'
                 sh 'echo ${API_URL}'
 
