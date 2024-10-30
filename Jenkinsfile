@@ -1,6 +1,9 @@
 pipeline {
     agent any
     tools { nodejs "node" }
+    triggers {
+        githubPush()
+    }
     stages {
         stage('Prepare') {
             steps {
