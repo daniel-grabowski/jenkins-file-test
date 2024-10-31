@@ -2,8 +2,8 @@ pipeline {
     agent any
     tools { nodejs "node" }
     triggers {
-        githubPush()
-    }       
+        pollSCM 'H * * * *'
+    }
     stages {
         stage('Prepare') {
             steps {
