@@ -1,12 +1,14 @@
 pipeline {
     agent any
     tools { nodejs "node" }
-    triggers {
-        pollSCM 'H * * * *'
-    }
     stages {
         stage('Prepare') {
             steps {
+                script {
+                    this_branch = "${GIT_BRANCH}".trim()
+                    echo("this_branch: ${this_branch}")
+                }
+    
                 sh 'echo test'
                 sh 'echo Log API_URL parameter'
                 sh 'echo ${API_URL}'
