@@ -4,10 +4,8 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                script {
-                    this_branch = "${GIT_BRANCH}".trim()
-                    echo("this_branch: ${this_branch}")
-                }
+                sh 'echo Log GIT_BRANCH'
+                sh 'echo ${GIT_BRANCH}'
     
                 sh 'echo test'
                 sh 'echo Log API_URL parameter'
